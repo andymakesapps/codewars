@@ -15,12 +15,14 @@ def simplify(poly):
         else:
             poly_dict[match_symbol] = match_unit
     print(poly_dict)
+    #TODO: Transform dict intro string - new function ?
 
 def break_up_poly(poly_unit):
     unit_value = 1
     if poly_unit[0] == '-':
         unit_value = -1
-    poly_unit = poly_unit[1:]
+    if poly_unit[0] == '-' or poly_unit[0] == '+':
+        poly_unit = poly_unit[1:]
     
     pattern = '([\d+]?)(\w+)'
     poly_matches = re.match(pattern, poly_unit)
