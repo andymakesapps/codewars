@@ -1,6 +1,3 @@
-from math import factorial
-
-
 def factorize(number):
     factors = []
     output = ''
