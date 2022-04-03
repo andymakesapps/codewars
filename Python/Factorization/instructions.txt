@@ -1,0 +1,1 @@
+Write a script that prints out the factorized form of an input number
